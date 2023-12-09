@@ -1,0 +1,45 @@
+[Adblock Plus 2.0]
+! Title: Less Annoying YouTube
+! Description: Hides or deactivates unnecessary and distractive or irritative elements of YouTube platform (Polymer design). Filters list intended for use with uBO/ABP and similar or built-in Brave Browser's ad-blocker. NOTE: May be incompatible with ReHike, YouTube Redux and similar add-ons.
+! Date: 2023/12/09
+! Expires: 14 days
+
+! https://winaero.com/youtube-introduced-intentional-slowdowns-for-ad-block-users/
+youtube.com##+js(nano-stb, resolve(1), *, 0.001)
+
+! endscreen
+youtube.com##.html5-endscreen
+
+! player: 'More videos' widget
+youtube.com##.ytp-pause-overlay-container
+
+! hides unnecessary navigation (previous, next, mini-player)
+youtube.com##.ytp-prev-button
+youtube.com##.ytp-next-button
+youtube.com##.ytp-miniplayer-button
+
+! animated thumbnails
+i.ytimg.com/an_webp/*/mqdefault_6s.webp
+
+! video description: channel info, 'Music' section, 'Suggested by'
+youtube.com##.ytd-video-description-infocards-section-renderer
+youtube.com##ytd-structured-description-content-renderer
+youtube.com###always-shown
+
+! suggestions on video page
+youtube.com##ytd-compact-radio-renderer
+youtube.com##yt-chip-cloud-chip-renderer:has(yt-formatted-string[title="Dla Ciebie"],[title="For you"],[title="Vir jou"],[title="Sizin üçün"],[title="Untuk Anda"],[title="Za vas"],[title="Per a tu"],[title="Pro vás"],[title="Til dig"],[title="Empfehlungen"],[title="Teile"],[title="Para ti"],[title="Zuretzat"],[title="Para sa iyo"],[title="Pour vous"],[title="Okwakho"],[title="Fyrir þig"],[title="Kwa ajili yako"],[title="Tieši jums"],[title="Jums"],[title="Neked ajánlott"],[title="Voor jou"],[title="For deg"],[title="Siz uchun"],[title="Para si"],[title="Pentru tine"],[title="Për ty"],[title="Pre vás"],[title="Zate"],[title="Sinulle"],[title="För dig"],[title="Dành cho bạn"],[title="Size özel"],[title="Для вас"],[title="За вас"],[title="Сунуштайбыз"],[title="Сізге арналған"],[title="Танд зориулсан"],[title="Ձեզ համար"],[title="בשבילך"],[title="آپ کیلئے"],[title="محتوى مقترَح لك"],[title="ویژه شما"],[title="तपाईंका लागि"],[title="तुमच्यासाठी"],[title="आपके लिए सुझाव"],[title="আপোনাৰ বাবে"],[title="আপনার জন্য"],[title="ਤੁਹਾਡੇ ਲਈ"],[title="તમારા માટે"],[title="ଆପଣଙ୍କ ପାଇଁ"],[title="உங்களுக்கானவை"],[title="మీ కోసం"],[title="ನಿಮಗಾಗಿ"],[title="നിങ്ങൾക്കുള്ളവ"],[title="ඔබට"],[title="สำหรับคุณ"],[title="ສຳລັບທ່ານ"],[title="သင့်အတွက်"],[title="თქვენთვის"],[title="ለእርስዎ"],[title="សម្រាប់អ្នក"],[title="为你推荐"],[title="為你推薦"],[title="あなたへのおすすめ"],[title="추천"])
+
+! Shorts
+youtube.com##ytd-rich-shelf-renderer
+youtube.com##ytd-reel-shelf-renderer
+
+! Search results
+youtube.com##ytd-movie-renderer
+youtube.com##ytd-shelf-renderer
+youtube.com##ytd-radio-renderer
+youtube.com###offer-module
+
+! any reference to YouTube Kids, this crap shouldn't exist
+youtube.com##ytd-guide-entry-renderer:has(a[href*="youtubekids.com"])
+youtubekids.com
