@@ -1,6 +1,6 @@
 <h1 align="center">LessAnnoyingYouTube</h1>
 
-- Hides or deactivates unnecessary and distractive or irritative elements of YouTube platform (Polymer design) like recommendations, Shorts sections, channel info and Music section in the video description.</li>
+- Hides or deactivates unnecessary and distractive or irritative elements of YouTube platform (Polymer design) like animated thumbnails, recommendations, Shorts sections, channel info and Music sections in the video description.</li>
 - Filter list intended for use with uBO (recommended)/ABP and similar or built-in Brave Browser's ad-blocker.
 
 <p align="center"><b>NOTE:</b> May be incompatible with ReHike, YouTube Redux and similar add-ons. This filters set blocks the access to YouTube Kids.</p>
